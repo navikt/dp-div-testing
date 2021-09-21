@@ -53,11 +53,11 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Archive NAIS yaml
-          if: github.ref == 'refs/heads/main'
-          uses: actions/upload-artifact@v1
-          with:
-            name: nais-yaml
-            path: nais
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v1
+        with:
+          name: nais-yaml
+          path: nais
 
   deploy-dev:
     name: Deploy to dev
